@@ -1,0 +1,98 @@
+.back-to-menu {
+    position: fixed; /* Fixe l'élément par rapport à la fenêtre du navigateur */
+    top: 10px; /* Espacement depuis le haut */
+    left: 10px; /* Espacement depuis la gauche */
+    z-index: 1000; /* S'assure que l'icône est au-dessus des autres éléments */
+}
+
+.back-to-menu a {
+    display: inline-block;
+    padding: 5px; /* Espacement autour de l'icône */
+}
+
+.back-to-menu img {
+    width: 32px; /* Taille de l'icône */
+    height: auto; /* Garde le ratio de l'icône intact */
+}
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #e0ffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header .cloud {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.content .block {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.content .block h2, .content .block h3 {
+    color: #008b8b;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content .block p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.content .block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content .block ul li {
+    background: #add8e6;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .page-container {
+        padding: 40px;
+    }
+
+    .content .block {
+        padding: 15px;
+    }
+
+    .content .block h2, .content .block h3 {
+        font-size: 1.2em;
+    }
+
+    .content .block ul li {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .content .block h2, .content .block h3 {
+        font-size: 1em;
+    }
+
+    .content .block ul li {
+        font-size: 0.7em;
+    }
+}

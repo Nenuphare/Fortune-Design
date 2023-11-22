@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.fortune {
+    background: linear-gradient(to right, #f0f0f0, #f06292);
+}
+
+.mission {
+    background: linear-gradient(to right, #f0f0f0, #64b5f6);
+}
+
+.card-icon span {
+    font-weight: bold;
+    color: white;
+}
+
+.card p {
+    flex: 1;
+    margin: 0;
+    color: #333;
+    font-size: calc(4vw + 1px); /* Taille de texte responsive */
+}
+
+.back-to-menu {
+    position: fixed; /* Fixe l'élément par rapport à la fenêtre du navigateur */
+    top: 10px; /* Espacement depuis le haut */
+    left: 10px; /* Espacement depuis la gauche */
+    z-index: 1000; /* S'assure que l'icône est au-dessus des autres éléments */
+}
+
+.back-to-menu a {
+    display: inline-block;
+    padding: 5px; /* Espacement autour de l'icône */
+}
+
+.back-to-menu img {
+    width: 32px; /* Taille de l'icône */
+    height: auto; /* Garde le ratio de l'icône intact */
+}
+
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80vw; /* Adaptation à la largeur de la vue */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-icon {
+        width: 25vw; /* Taille d'icône responsive */
+        height: 25vw; /* Taille d'icône responsive */
+    }
+
+    .card p {
+        font-size: 5vw;
+        text-align: center;
+    }
+}

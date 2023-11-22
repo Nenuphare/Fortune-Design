@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 70%;
+}
+.menu-heading{
+    margin-bottom: 20px;
+}
+.menu-heading img {
+    width: 50%;
+}
+
+.menu-heading h1 {
+    color: #333;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin: 20px 0;
+}
+
+.menu-list li img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.menu-list li a:hover {
+    color: #007bff;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 600px) {
+    .menu-container {
+        width: 50%; /* Permet au menu de s'adapter à la largeur de l'écran */
+        padding: 10px;
+        height: 350px;
+    }
+
+    .menu-heading h1 {
+        font-size: 20px;
+    }
+
+    .menu-list li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-heading img {
+        width: 150px;
+    }
+
+    .menu-list li img {
+        width: 75px;
+    }
+}
