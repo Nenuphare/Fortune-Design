@@ -3,19 +3,19 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FAQ/Contact</title>
-    <link rel="stylesheet" href="../styles/stylesFaq.css">
+    <link rel="stylesheet" href="./styles/stylesFaq.css">
 </head>
 <body>
     <section>
         <div class="back-to-menu">
-            <a href="index.php" title="Back to menu">
+            <a href="/index.html" title="Back to menu">
                 <img src="../images/back.png">
             </a>
         </div>
     </section>
     <section class="section-heading">
         <div class="menu-heading">
-            <img src="../images/Logo.png" alt="Icon">
+            <img src="./images/Logo.png" alt="Icon">
             <h1>Contact</h1>
         </div>
     </section>

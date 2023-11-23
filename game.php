@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Game</title>
-    <link rel="stylesheet" href="../styles/styleGame.css"> 
+    <link rel="stylesheet" href="./styles/styleGame.css"> 
 </head>
 <body>
     <div class="back-to-menu">
         <a href="index.php" title="Back to menu">
-            <img src="../images/back.png">
+            <img src="./images/back.png">
         </a>
     </div>
 
     <div class="container">
         <button id="lancerDe" class="dice-btn">Throw Dice</button>
         <div id="diceContainer" class="dice-container">
-            <img id="dice" src="../images/die1.png" alt="Dé">
+            <img id="dice" src="./images/die1.png" alt="Dé">
         </div>
     </div>
-    <script src="../game.js"></script>
+    <script src="./game.js"></script>
 </body>
 </html>

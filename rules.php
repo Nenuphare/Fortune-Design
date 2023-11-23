@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortune Design</title>
-    <link rel="stylesheet" href="../styles/stylesRules.css">
+    <link rel="stylesheet" href="./styles/stylesRules.css">
 </head>
 <body>
     <div class="back-to-menu">
-        <a href="index.php" title="Retour au menu">
-            <img src="../images/back.png">
+        <a href="/index.php" title="Retour au menu">
+            <img src="./images/back.png">
         </a>
     </div>
     <div class="page-container">
         <header class="header">
             <div class="cloud">
-                <img src="../images/Logocard1.png">
+                <img src="./images/Logocard1.png">
             </div>
         </header>
         <section class="content">
