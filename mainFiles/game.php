@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="back-to-menu">
-        <a href="index.php" title="Retour au menu">
+        <a href="index.php" title="Back to menu">
             <img src="../images/back.png">
         </a>
     </div>
 
     <div class="container">
-        <button id="lancerDe" class="dice-btn">Lancer le Dé</button>
+        <button id="lancerDe" class="dice-btn">Throw Dice</button>
         <div id="diceContainer" class="dice-container">
             <img id="dice" src="../images/die1.png" alt="Dé">
         </div>
