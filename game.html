@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Game</title>
     <link rel="stylesheet" href="./styles/styleGame.css"> 
+    <style>
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            width: 100%; 
+            pointer-events: none; 
+        }
+        .text-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('./images/cloud.png');
+            background-size: contain; /* Changez 'cover' à 'contain' pour s'assurer que l'image est entièrement visible */
+            background-repeat: no-repeat;
+            background-position: center; 
+            color: #333; /* Couleur du texte */
+            font-size: 1rem; /* Réduction de la taille du texte */
+            border-radius: 20px; /* Bord arrondi de la carte */
+            padding: 20px; /* Espace intérieur */
+            margin-top: 20px; /* Espace au-dessus de la carte */
+            height: 150px; /* Hauteur fixe de la carte */
+            width: 300px; /* Largeur fixe de la carte */
+            text-align: center; /* S'assure que le texte est centré */
+        }
+    </style>
 </head>
 <body>
     <div class="back-to-menu">
@@ -15,11 +45,29 @@
     </div>
 
     <div class="container">
+        <button id="showTextBtn" class="dice-btn">Mission Card</button>
+        <div id="textDisplay" class="text-display"></div> <!-- Cette div contiendra le texte sur l'image -->
         <button id="lancerDe" class="dice-btn">Throw Dice</button>
         <div id="diceContainer" class="dice-container">
             <img id="dice" src="./images/die1.png" alt="Dé">
         </div>
     </div>
     <script src="./game.js"></script>
+    <script>
+        document.getElementById('showTextBtn').addEventListener('click', function() {
+            var texts = [
+                "Redisgn Pepsi's logo",
+                "Draw a poster for the new McDonald's burger",
+                "Draw an icon for a birthday",
+                "Draw a logo with your initials",
+                "Draw a pencil case with your name",
+                "Draw a bottle of water with the brand of your choice",
+                "Draw a case with those words <my phone>",
+                "Redesign Luis Vuitton's logo"
+            ];
+            var randomText = texts[Math.floor(Math.random() * texts.length)];
+            document.getElementById('textDisplay').textContent = randomText; // Met à jour la div avec le texte aléatoire
+        });
+    </script>
 </body>
 </html>
