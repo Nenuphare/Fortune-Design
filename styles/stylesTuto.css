@@ -2,19 +2,26 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     height: 100vh;
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
+    
 }
-
+.heading{
+    max-width: 90%; /* Empêche le débordement et garde du padding sur les côtés */
+    margin: 20px 0; /* Ajoute de l'espace au-dessus et en dessous du heading */
+}
 .cards-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-around;
     gap: 20px;
-    padding: 20px;
+    padding: 5%; /* Utilisation de pourcentages pour le padding */
 }
 
 .card {
@@ -25,55 +32,39 @@ body {
     align-items: center;
     padding: 10px;
     max-width: 300px;
+    margin: 0 auto; /* Centre les cartes horizontalement */
 }
 
 .card-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.fortune {
-    background: linear-gradient(to right, #f0f0f0, #f06292);
-}
-
-.mission {
-    background: linear-gradient(to right, #f0f0f0, #64b5f6);
-}
-
-.card-icon span {
-    font-weight: bold;
-    color: white;
+.card-icon img {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas son conteneur */
+    height: auto;
 }
 
 .card p {
     flex: 1;
     margin: 0;
     color: #333;
-    font-size: calc(4vw + 1px); /* Taille de texte responsive */
+    font-size: 1rem; /* Taille de police fixe pour les grands écrans */
 }
 
 .back-to-menu {
-    position: fixed; /* Fixe l'élément par rapport à la fenêtre du navigateur */
-    top: 10px; /* Espacement depuis le haut */
-    left: 10px; /* Espacement depuis la gauche */
-    z-index: 1000; /* S'assure que l'icône est au-dessus des autres éléments */
-}
-
-.back-to-menu a {
-    display: inline-block;
-    padding: 5px; /* Espacement autour de l'icône */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
 }
 
 .back-to-menu img {
-    width: 32px; /* Taille de l'icône */
-    height: auto; /* Garde le ratio de l'icône intact */
+    width: 32px;
+    height: auto;
 }
-
 
 /* Media queries pour la responsivité */
 @media (max-width: 768px) {
@@ -83,18 +74,55 @@ body {
     }
 
     .card {
-        width: 80vw; /* Adaptation à la largeur de la vue */
+        width: 80%; /* Adaptation à la largeur de l'écran */
         flex-direction: column;
         align-items: center;
     }
 
     .card-icon {
-        width: 25vw; /* Taille d'icône responsive */
-        height: 25vw; /* Taille d'icône responsive */
+        width: 82px; /* Taille d'icône ajustée */
+        height: 50px; /* Taille d'icône ajustée */
     }
 
     .card p {
-        font-size: 5vw;
+        font-size: calc(4vw + 1px); /* Taille de texte responsive */
         text-align: center;
     }
 }
+
+@media (min-width: 769px) {
+    .cards-container {
+        max-height: 70%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crée une disposition en grille avec des colonnes flexibles */
+        grid-gap: 20px;
+    }
+}
+@media (min-width: 585px) and (max-width: 768px) {
+    .cards-container {
+        align-items: center; /* Centre les cartes verticalement si nécessaire */
+        padding: 10px; /* Réduit le padding si nécessaire */
+    }
+
+    .card {
+        margin: 10px auto; /* Ajoute de l'espace autour des cartes */
+        flex-direction: column; /* Stack les éléments verticalement pour les petits écrans */
+        align-items: center; /* Centre le contenu des cartes */
+    }
+
+    .card-icon {
+        width: 50px; /* Réduit la taille des icônes */
+        height: 50px; /* Réduit la taille des icônes */
+        margin-bottom: 10px; /* Ajoute un espace entre l'icône et le texte */
+    }
+
+    .card p {
+        font-size: calc(2.5vw + 1px); /* Réduit davantage la taille du texte pour les petits écrans */
+        padding: 0 10px; /* Ajoute un padding pour ne pas toucher les bords de la carte */
+    }
+
+    .back-to-menu img {
+        width: 24px; /* Réduit la taille de l'image de retour au menu si nécessaire */
+    }
+}
+

@@ -22,8 +22,11 @@ body, h1, h2, h3, p {
 .page-container {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #e0ffff;
     padding: 20px;
+    background-image: url('../images/cloud-background.png'); /* Ajoute le chemin de l'image de fond */
+    background-size: cover; /* Assure que l'image de fond couvre toute la page */
+    background-repeat: no-repeat; /* L'image de fond ne se répétera pas */
+    background-attachment: fixed; /* L'image de fond restera fixe lors du défilement de la page */
 }
 
 .header {
@@ -67,7 +70,24 @@ body, h1, h2, h3, p {
     padding: 5px;
     border-radius: 10px;
 }
-
+.content img{
+    width: 50vh;
+}
+.block-img{
+    background: #add8e6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#h2-score{
+    margin-bottom: 5px;
+    color: #006262;
+}
 /* Responsive Design */
 @media only screen and (max-width: 600px) {
     .page-container {

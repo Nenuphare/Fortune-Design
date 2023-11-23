@@ -7,7 +7,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+        background-image: url('../images/cloud-background.png'); /* Ajoute le chemin de l'image de fond */
+        background-size: cover; /* Assure que l'image de fond couvre toute la page */
+        background-repeat: no-repeat; /* L'image de fond ne se répétera pas */
+        background-attachment: fixed; /* L'image de fond restera fixe lors du défilement de la page */
+
 }
+
 
 .menu-container {
     display: flex;
